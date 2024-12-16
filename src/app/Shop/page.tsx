@@ -191,7 +191,7 @@ export default function Page() {
         {/* Products Section */}
         <div className="w-full border-b-2 py-8 md:py-16 flex flex-col justify-center bg-[#F4F5F7] px-4 md:px-8">
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 justify-center">
-            {OurProducts.map((product, index) => (
+            {OurProducts.map((product) => (
               <div
                 className="bg-white group relative overflow-hidden w-full max-w-[285px] mx-auto"
                 key={product.id}
