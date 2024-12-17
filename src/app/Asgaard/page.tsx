@@ -130,81 +130,92 @@ function Page() {
       <Navigation />
 
       {/* Image and Content Section */}
-      <div className="flex flex-row mt-10 w-full px-20 gap-10">
-        {/* Image on the Left */}
-        <div className="w-1/2">
-          <img
-            src="/images/blog.jpg"
-            alt="Asgaard Sofa"
-            className="w-full h-[500px] rounded"
-          />
-        </div>
+<div className="flex flex-col lg:flex-row mt-10 w-full px-4 lg:px-20 gap-10">
+  {/* Image on the Left */}
+  <div className="w-full lg:w-1/2">
+    <img
+      src="/images/blog.jpg"
+      alt="Asgaard Sofa"
+      className="w-full h-[300px] lg:h-[500px] object-cover rounded"
+    />
+  </div>
 
-        {/* Content on the Right */}
-        <div className="w-1/2 flex flex-col justify-start">
-          <h1 className="text-black font-bold text-2xl">Asgaard Sofa</h1>
-          <p className="text-black mt-2 text-xl">Rs. 250,000.00</p>
+  {/* Content on the Right */}
+  <div className="w-full lg:w-1/2 flex flex-col justify-start">
+    <h1 className="text-black font-bold text-2xl lg:text-3xl">Asgaard Sofa</h1>
+    <p className="text-black mt-2 text-lg lg:text-xl">Rs. 250,000.00</p>
 
-          {/* Star Rating */}
-          <div className="flex items-center mt-2 space-x-1">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <IoMdStarOutline
-                key={i}
-                className="text-yellow-500 text-xl"
-                aria-hidden="true"
-              />
-            ))}
-            <span className="text-gray-600 text-sm ml-2">| 5 customer reviews</span>
-          </div>
+    {/* Star Rating */}
+    <div className="flex items-center mt-2 space-x-1">
+      {Array.from({ length: 5 }).map((_, i) => (
+        <IoMdStarOutline
+          key={i}
+          className="text-yellow-500 text-lg lg:text-xl"
+          aria-hidden="true"
+        />
+      ))}
+      <span className="text-gray-600 text-sm lg:text-base ml-2">| 5 customer reviews</span>
+    </div>
 
-          {/* Product Description */}
-          <p className="mt-4 text-gray-700 leading-relaxed">
-            Setting the bar as one of the loudest speakers in its class, the
-            Kilburn is a compact, stout-hearted hero with a well-balanced
-            audio which boasts a clear midrange and extended highs for a sound.
-          </p>
+    {/* Product Description */}
+    <p className="mt-4 text-gray-700 leading-relaxed">
+      Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.
+    </p>
 
-          {/* Size Selection */}
-          <p className="mt-4 font-bold text-black">Size</p>
-          <div className="flex space-x-4 mt-2">
-            <button className="px-4 py-2 border rounded hover:bg-pink-200">L</button>
-            <button className="px-4 py-2 border rounded hover:bg-pink-200">XL</button>
-            <button className="px-4 py-2 border rounded hover:bg-pink-200">XS</button>
-          </div>
+    {/* Size Selection */}
+    <p className="mt-4 font-bold text-black">Size</p>
+    <div className="flex space-x-4 mt-2">
+      <button className="px-4 py-2 border rounded hover:bg-pink-200">L</button>
+      <button className="px-4 py-2 border rounded hover:bg-pink-200">XL</button>
+      <button className="px-4 py-2 border rounded hover:bg-pink-200">XS</button>
+    </div>
 
-          {/* Color Selection */}
-          <p className="mt-6 font-bold text-gray-700">Color</p>
-          <div className="flex space-x-4 mt-2">
-            <div className="w-8 h-8 rounded-full bg-purple-500 border border-gray-300"></div>
-            <div className="w-8 h-8 rounded-full bg-black border border-gray-300"></div>
-            <div className="w-8 h-8 rounded-full bg-yellow-800 border border-gray-300"></div>
-          </div>
+    {/* Color Selection */}
+    <p className="mt-6 font-bold text-gray-700">Color</p>
+    <div className="flex space-x-4 mt-2">
+      <div className="w-8 h-8 rounded-full bg-purple-500 border border-gray-300"></div>
+      <div className="w-8 h-8 rounded-full bg-black border border-gray-300"></div>
+      <div className="w-8 h-8 rounded-full bg-yellow-800 border border-gray-300"></div>
+    </div>
 
-          {/* Quantity and Actions */}
-          <div className="flex items-center mt-6 space-x-4">
-            <div className="flex items-center space-x-2">
-              <button className="px-8 py-2 border rounded hover:bg-pink-200">- <span className='ml-4 mr-4'>1</span> +</button>
-            </div>
-            <button className="px-6 py-2 bg-white text-black border rounded hover:bg-pink-200">Add to Cart</button>
-            <button className="px-6 py-2 bg-white text-black border rounded hover:bg-pink-200">+ Compare</button>
-          </div>
-
-          <hr className="mt-6 border-gray-300" />
-
-          {/* Additional Info */}
-          <ul className="mt-4 space-y-4 text-gray-400">
-            <li><span className="font-semibold mt-6 text-gray-400">SKU</span> <span className='ml-10 mr-4'>:</span>SSOO1</li>
-            <li><span className="font-semibold mt-6 text-gray-400">Category</span> <span className='ml-1 mr-4'>:</span>Sofas</li>
-            <li><span className="font-semibold mt-6 text-gray-400">Tags</span> <span className='ml-10 mr-4'>:</span>Sofa, Chair, Home, Shop</li>
-            <li className="flex items-center space-x-2">
-              <span className="font-semibold mt-2 text-gray-400">Share <span className='ml-8 mr-4'>:</span></span>
-              <FaFacebook className="cursor-pointer ml-2  mt-2 text-black" />
-              <FaLinkedin className="cursor-pointer ml-2   mt-2 text-black" />
-              <FaTwitter className="cursor-pointer ml-2  mt-2 text-black" />
-            </li>
-          </ul>
-        </div>
+    {/* Quantity and Actions */}
+    <div className="flex flex-wrap items-center mt-6 space-x-4">
+      <div className="flex items-center space-x-2">
+        <button className="px-6 py-2 border rounded hover:bg-pink-200">
+          - <span className="mx-4">1</span> +
+        </button>
       </div>
+      <button className="px-6 py-2 bg-white text-black border rounded hover:bg-pink-200">
+        Add to Cart
+      </button>
+      <button className="px-6 py-2 bg-white text-black border rounded hover:bg-pink-200 whitespace-nowrap">
+    + Compare
+  </button>
+    </div>
+
+    <hr className="mt-6 border-gray-300" />
+
+    {/* Additional Info */}
+    <ul className="mt-4 space-y-4 text-gray-400">
+      <li>
+        <span className="font-semibold">SKU</span> <span className="ml-4">:</span> SSOO1
+      </li>
+      <li>
+        <span className="font-semibold">Category</span> <span className="ml-1">:</span> Sofas
+      </li>
+      <li>
+        <span className="font-semibold">Tags</span> <span className="ml-4">:</span> Sofa, Chair, Home, Shop
+      </li>
+      <li className="flex items-center space-x-2">
+        <span className="font-semibold">Share</span> <span className="ml-4">:</span>
+        <FaFacebook className="cursor-pointer text-black" />
+        <FaLinkedin className="cursor-pointer text-black" />
+        <FaTwitter className="cursor-pointer text-black" />
+      </li>
+    </ul>
+  </div>
+</div>
+
 
       {/* Divider */}
       <hr className="my-8 border-gray-300" />
